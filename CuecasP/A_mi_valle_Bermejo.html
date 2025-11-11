@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>MusBol - A mi valle Bermejo</title>
+    <link rel="stylesheet" href="1stylesPartituras.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/abcjs@6.2.3/dist/abcjs-basic-min.js" defer></script>
+    <meta name="google" content="notranslate">
+</head>
+
+<body>
+    <header>
+        <h1 class="encabezado">MÚSICAS Y PARTITURAS BOLIVIANAS</h1>
+    </header>
+
+    <nav class="nav">
+        <ul> 
+            <li><a href="../index.html" class="botonI">
+                <i class="fa-notdog fa-solid fa-house"></i>
+            </a></li>
+            <li><a href="../Cueca.html">Cuecas</a></li>
+            <li>
+                <a href="#">Géneros</a>
+                <ul>
+                    <li><a href="../Cueca.html">Cuecas</a></li>
+                    <li><a href="../Huayños.html">Huayños</a></li>
+                    <li><a href="../Morenadas.html">Morenadas</a></li>
+                    <li><a href="../Chacareras.html">Chacareras</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="titulo">
+        <div> 
+            <h2>A mi valle Bermejo (Dm)</h2>
+        </div>
+    </section>
+
+    <div class="tonalidad-botones">
+        <button onclick="cambiarTonalidad('L')">(Letra y Acordes)</button>
+        <button onclick="cambiarTonalidad('F')">F / Dm (Quena)</button>
+        <button onclick="cambiarTonalidad('D')">D / Bm (Saxo)</button>
+    </div>
+
+    <div class="content-container">
+        <div id="partitura-container"></div>
+        <div id="letra-container" style="display:none;"></div>
+    </div>
+
+<footer>Todos los derechos reservados. Douglas Suarez Zubieta</footer>
+
+<script>
+/* ////// Datos de Partituras y Letras ////// */
+const partituras = {
+    'D': `
+X:1
+T:
+C: Revisión y Transcripción
+C: Douglas Suarez Zubieta
+M:6/8
+L:1/4 
+K:D
+V:1
+Q:"Intro"
+| d/>d/B/ d/ B | d/>d/B/ d/ B | d/>d/B/ d/B/A/ | F3/2 z/ d//d//d//e// | f/>f/e/ f/ e | f3/2 z/ d//d//d//e// |
+w: Bm | G | G A | D | A | D |
+| f/>f/e/ f/ d | B3/2 d//d//d//e// | f/>f/e/ f/ e | f3/2 z/ d//d//d//e// | f/>f/e/ f/e/d/ | B z ^A | B z ^A | B3/2 z d/ ||
+w: F#7 | Bm | A | D | F#7 | Bm _ F#7 | Bm _ F#7 | Bm | 
+Q:"Primera-Segunda"
+| d/>d/c/ A/c/d/- | d/d/c/ B/c/d/- | d/d/e/ d B/ | A3/2 z f | f/>f/e/ d/e/f/- |f/f/e/ d/e/f/- |
+w: Bm | G | G A | D | A | D | 
+| f/f/a/ f e/ | d3/2 z f/ | f/>f/e/ d/e/f/- | f/f/e/ d/e/f/- | f/f/a/ f e/ |1 d3/2 z d/ :||2 d2 z ||
+w: F#7 | Bm | A | D | F#7 | Bm | Bm |
+Q:"Quimba"
+|| B d/ B/ A | G3/2 z G | A/>A/A/ A/A/A/ | e/ f z f/ | f/>f/e/ d/e/f/- | f/f/e/ d/e/f/- |
+w: Bm | G | A | D | A | D |
+| f/f/a/ f e/ | d3/2 z f/ | f/>f/e/ d/e/f/- | f/f/e/ d/e/f/- | f/f/'/ f e/ | d3/2 z d/ | 
+w: F#7 | Bm | A | D | F#7 | Bm |
+Q:"Jaleo"
+| d/>d/c/ A/c/d/- | d/d/c/ B/c/d/- | d/d/e/ d B/ | A3/2 z f | f/>f/e/ d/e/f/- |f/f/e/ d/e/f/- |
+w: Bm | G | G __ A | D | A | D | 
+| f/f/a/ f e/ | d3/2 z f/ | f/>f/e/ d/e/f/- | f/f/e/ d/e/f/- | f/f/a/ f e/ | d2 z  |]
+w: F#7 | Bm | A | D | F#7 | Bm |
+`,
+    'F': `
+X:1
+T:
+C: Revisión y Transcripción
+C: Douglas Suarez Zubieta
+M:6/8
+L:1/4
+K:F
+V:1
+Q:"Intro"
+| f/>f/d/ f/ d | f/>f/d/ f/ d | f/>f/d/ f/d/c/ | A3/2 z/ f//f//f//g// | a/>a/g/ a/ g | a3/2 z/ f//f//f//g// |
+w: Dm | Bb | Bb __ C | F | C | F |
+| a/>a/g/ a/ f | d3/2 f//f//f//g// | a/>a/g/ a/ g | a3/2 z/ f//f//f//g// | a/>a/g/ a/g/f/ | d z ^c | d z ^c | d3/2 z f/ 
+w: A7 | Dm | C | F | A7 | Dm _ A7 | Dm _ A7 | Dm |  
+Q:"Primera y Segunda"
+| f/>f/e/ d/e/f/- | f/f/e/ d/e/f/- | f/f/g/ f d/ | c3/2 z a | a/>a/g/ f/g/a/- |a/a/g/ f/g/a/- |
+w: Dm | Bb | Bb C | F | C | F | 
+| a/a/c'/ a g/ | f3/2 z a/ | a/>a/g/ f/g/a/- | a/a/g/ f/g/a/- | a/a/c'/ a g/ |1 f3/2 z f/ :||2 f2 z ||
+w: A7 | Dm | C | F | A7 | Dm | Dm |
+Q:"Quimba"
+|| d f/ d/ c | B3/2 z B | c/>c/c/ c/c/c/ | g/ a z a/ | a/>a/g/ f/g/a/- | a/a/g/ f/g/a/- |
+w: Dm | Bb | C | F | C | F |
+| a/a/c'/ a g/ | f3/2 z a/ | a/>a/g/ f/g/a/- | a/a/g/ f/g/a/- | a/a/c'/ a g/ | f3/2 z f/ | 
+w: A7 | Dm | C | F | A7 | Dm |
+Q:"Jaleo"
+|| f/>f/e/ d/e/f/- | f/f/e/ d/e/f/- | f/f/g/ f d/ | c3/2 z a | a/>a/g/ f/g/a/- |a/a/g/ f/g/a/- |
+w: Dm | Bb | Bb __ C | F | C | F | 
+| a/a/c'/ a g/ | f3/2 z a/ | a/>a/g/ f/g/a/- | a/a/g/ f/g/a/- | a/a/c'/ a g/ | f3/2 z3/2 |]
+w: A7 | Dm | C | F | A7 | Dm |
+`,
+};
+
+const Letras = {
+    'L': `
+<b>(Primera)</b>
+    Dm          Bb
+Del bello jardín chapaco
+          C           F  
+vengo cantando coplas de amor
+    C               F
+//a la tierra del lapacho
+   A7             Dm
+traigo todito tu corazón//
+
+<b>(Vuelta)</b>
+    Dm          Bb
+Coplitas para Bermejo
+          C           F
+guitarra bombo también violín
+    C               F
+//y dejaré una amancaya
+    A7             Dm
+pa que jamás te olvides de mi//
+
+<b>Quimba</b>
+Dm      Bb
+Bermejeñita
+        C           F
+florcita de tu río azul
+    C               F
+//besar tus labios quisiera
+    A7             Dm
+llenos de azúcar llenos de miel//
+`
+};
+
+/* Función principal para cambiar el contenido */
+function cambiarTonalidad(tono) {
+    const partituraContainer = document.getElementById('partitura-container');
+    const letraContainer = document.getElementById('letra-container');
+    
+    // Verificación básica
+    if (!partituraContainer || !letraContainer) {
+        console.error('Error: Contenedores no encontrados');
+        return;
+    }
+
+    // Lógica para mostrar Letra
+    if (tono === 'L') {
+        partituraContainer.style.display = 'none';
+        letraContainer.style.display = 'block';
+        
+        // El formato <pre> se maneja con el CSS, solo inyectamos el HTML de la letra
+        letraContainer.innerHTML = `<pre>${Letras['L']}</pre>`;
+    } else {
+        // Lógica para mostrar Partitura
+        partituraContainer.style.display = 'block';
+        letraContainer.style.display = 'none';
+        partituraContainer.innerHTML = ''; // Limpiar
+
+        const abc = partituras[tono];
+
+        // Función de renderizado real, envuelta en try/catch
+        const renderizar = () => {
+            if (typeof ABCJS !== 'undefined' && ABCJS.renderAbc) {
+                try {
+                    ABCJS.renderAbc(partituraContainer, abc, {
+                        responsive: 'resize',
+                        paddingbottom: 50,
+                        paddingright: 50,
+                        scale: 1.5,
+                        add_classes: true
+                    });
+                } catch (error) {
+                    console.error('Error al renderizar partitura:', error);
+                    partituraContainer.innerHTML = '<p style="color: red; text-align: center;">Error al mostrar la partitura.</p>';
+                }
+            } else {
+                 partituraContainer.innerHTML = '<p style="color: red; text-align: center;">Librería ABCJS no disponible (problema de red/carga).</p>';
+            }
+        };
+
+        // Si ABCJS ya está disponible, renderiza inmediatamente.
+        if (typeof ABCJS !== 'undefined') {
+            renderizar();
+        } else {
+            // Si no está listo (debido a 'defer'), espera al evento 'load' o al script en sí
+            // Aquí confiamos en el atributo 'defer' y esperamos un poco.
+            setTimeout(renderizar, 100); 
+        }
+    }
+}
+
+/* Inicialización: Usamos DOMContentLoaded para definir la función, y llamamos a cambiarTonalidad
+   después de un pequeño retraso para asegurar que los scripts con 'defer' tengan tiempo de cargar. */
+document.addEventListener('DOMContentLoaded', function() {
+    // Inicializar mostrando la Letra y Acordes
+    cambiarTonalidad('L'); 
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,216 @@
+*{
+        margin: 0;
+        padding: 0;
+    }
+
+body {
+    background-color: rgb(168, 157, 98);
+    padding: 20px;
+}
+
+/*Formato de encabezado*/
+.encabezado {
+    font-size: 90%;
+    margin: 0;
+    font-family: 'Georgia';
+    text-align: center;
+}
+@media (min-width: 480px) {
+    .encabezado {
+        font-size: 150%;
+    }
+}
+
+/*Formato de tìtulo*/
+.titulo{
+    background: rgb(102, 102, 184);
+    padding: 0.5px;
+    color: rgb(2, 8, 10);
+    font-family: 'Georgia';
+    text-align: center;
+    font-size: 120%;
+    margin: 0 0 1% 0;
+    border-radius: 10px;   
+
+}
+@media (min-width: 480px) {
+    .titulo {
+        font-size: 180%;
+    }
+}
+
+/*Formato de barra de navegacion*/
+.nav {
+    background-color: rgb(39, 39, 36);
+    width: 100%;
+    margin: 1% 0% 1% 0%;
+    border-radius: 40px;   
+    align-items: center;
+    background-image: url(Banner1.jpg);
+
+}
+@media (min-width: 480px) {
+    .nav {
+        border-radius: 100px;  
+        width: 100%;
+    }
+}
+
+/*Formato de titulos (letra) de barra de navegacion*/
+.nav a {
+    background-color: rgb(166, 173, 87);
+    /* background-image: url(Banner1.jpg); */
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight:700;
+    text-align: center;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 3px;
+    font-size: 140%;
+}
+@media (min-width: 480px) {
+    .nav a {
+        font-size: 300%;
+        border-radius: 20px;
+    }
+}
+
+/*Formato de puntero cuando seleciona titulos de navegacion*/
+.nav a:hover {
+    background-color: rgb(134, 134, 230);
+    color: black;
+}
+
+/* Formato de titulos (bordes) de barra de navegacion*/
+.nav ul {
+    list-style-type: none; /* Para quitar los puntos */
+    padding: 5px;
+    margin: 5px;
+    display: flex; /* Esto hace que los li se pongan en horizontal */
+    justify-content: space-evenly;
+    flex-direction: row;
+    text-align: center;
+}
+@media (max-width: 320px) {
+    .nav ul {
+        flex-direction: column;
+    }
+}
+
+/* ocultar subtitulos*/
+.nav ul ul {
+    display: none;
+}
+
+/*Mostar subtitulos cuando se precione el menu*/
+.nav ul li:hover > ul {
+    background-color: rgb(57, 57, 53); /* Un color de fondo para el submenú */
+    display: flex;
+    flex-direction: column; /* Esto asegura que los elementos del submenú se muestren verticalmente */
+    position: absolute; /* Esto saca el submenú del flujo normal y lo superpone */
+    margin-top: 1px; /* Pequeño espacio debajo del enlace "Géneros" */
+    border-radius: 30px;
+    padding: 10px;
+    align-items:normal;
+    transform: translate(30px);
+}
+@media (min-width: 480px) {
+    .nav ul li:hover > ul {
+    transform: translate(-40px);
+    margin-top: 5px;
+}
+}
+
+/*Agrega espacio para cada elemento de la barra de nav*/
+.nav ul li {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+
+.ListaCueca {
+    display:flex;
+    justify-content:left;
+    padding-left: 24%;
+    background-color: rgb(134, 135, 125);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 40%;
+    border-radius: 20px;   
+    background-image: url(pizarra1.jpg);
+}
+@media (max-width: 480px) {
+    .ListaCueca {
+    font-size: 35%;
+    background-image: url(pizarraCel.jpg);
+    justify-content:left;
+    padding-left: 8%;
+
+}
+}
+
+.ListaCueca li a {
+    color: rgb(196, 193, 193) !important;
+}
+
+.menu {
+    font-size: 360%;
+}
+@media (min-width: 480px) {
+    .menu {
+    font-size: 600%;
+}
+}
+
+footer {
+    font-size: 150%;
+    margin-top: 10%;
+    text-align: center;
+}
+@media (max-width: 480px) {
+    footer {
+    margin-top: 80%;
+    font-size: 70%;
+}
+}
+
+
+/*Cuadro de buscar*/
+/* .buscar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+} */
+
+/*Mostar subtitulos cunado se precione el menu*/
+/* .buscar input {
+    width: 90%;
+    color:rgb(0, 0, 0);
+    text-align: center;
+    border-radius: 100px;   
+    font-size: 50px;
+    padding: 0 60 0 20px;
+    margin-bottom: 15px;
+}
+@media (max-width: 480px) {
+    .buscar input {
+        width: 90%;
+        font-size: 30px;
+}
+}
+
+.autocomplete {
+    display:block;
+}
+
+.search.active .autocomplete {
+  display: block;
+}
+
+.autocomplete li a {
+    font-size: 20px;
+    text-decoration: none;
+    color:black;
+    display: block; 
+}*/
