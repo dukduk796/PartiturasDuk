@@ -34,14 +34,14 @@
 
     <section class="titulo">
         <div> 
-            <h2>Anarrancherita (Am)</h2>
+            <h2>CHapaquita mia (Dm)</h2>
         </div>
     </section>
 
     <div class="tonalidad-botones">
         <button onclick="cambiarTonalidad('L')">(Letra y Acordes)</button>
-        <button onclick="cambiarTonalidad('C')">C / Am (Quena)</button>
-        <button onclick="cambiarTonalidad('A')">A / F#m (Saxo)</button>
+        <button onclick="cambiarTonalidad('F')">F / Dm (Quena)</button>
+        <button onclick="cambiarTonalidad('D')">D / Bm (Saxo)</button>
     </div>
 
     <div class="content-container">
@@ -54,93 +54,75 @@
 <script>
 /* ////// Datos de Partituras y Letras ////// */
 const partituras = {
-    'C': `
+    'F': `
 X:1
 T:
 C: Revisión y Transcripción
 C: Douglas Suarez Zubieta
 M:6/8
 L:1/4
-K:C
+K:F
 V:1
 Q:"Intro"
-[BGD]/ z/[BGD]/ [BGD]3/2 | [cGE]/ z/ [cGE]/ [cGE]3/2 | [BGE]/ z/ [BGE]/ [BGE]3/2 | [BGD]/ z/ [BGD]/ [BGD]3/2 | [cAE]/ z/ [cAE]/ [cAE]3/2 | [cGE]/ z/ [cGE]/ [cGE]3/2 |
-w: G | C | E7 | Am | G | C
-[BGE]/ z/ [BGE]/ [BGE]3/2 | [cAE]/ z/ [cAE]/ [cAE]/A/B/ |: c/>c/c/ c/d/d/ |  c/>c/c/ c/d/d/ | c/>c/c/ B/A/G/ |
-w: E7 | Am | C _ _ D | C _ _D | C _ _E7
-|1 A> z/ A/B/ :|2 A> z/ ^G || A3/2 z/ ^G | A3/2 z |
-w: Am | Am  E7| Am E7 | Am
-Q: "Primera"
-|| f>f/f/ f/f/f/- | f f/ f/f/f/- | f e/ e/ d | c2 c/ d/ | e/>e/e/ e/ d |
-w: F | F | F E D | C |C _ _D
- c e/ e/ d | c c/ c/ B | A2 c/ d/ | e/>e/e/ e/ d | c e/ e/ d | c c/ c/ B | A2 z ||
-w: C _ D |C _ E7 |Am | C _ D | C _ D | C _ E7 | Am |
-Q: "Vuelta"
-|| f>f/f/ f/f/f/- | f f/ f/f/f/- | f e/ e/ d | c2 c/ d/ | e/>e/e/ e/ d |
-w: F | F | F E D | C |C _ _D
- c e/ e/ d | c c/ c/ B | A2 c/ d/ | e/>e/e/ e/ d | c e/ e/ d | c c/ c/ B | A2 z ||
-w: C _ D |C _ E7 |Am | C _ D | C _ D | C _ E7 |Am |
-Q: "Quimba"
-|| f>f/f/ f/f/f/- | f f/ f/f/f/- | f e/ e/ d | c2 c/ d/ | e/>e/e/ e/ d |
-w: F | F | F E D | C |C _ _D
- c e/ e/ d | c c/ c/ B | A2 c/ d/ | e/>e/e/ e/ d | c e/ e/ d | c c/ c/ B | A2 z ||
-w: C _ D |C _ E7 |Am | C _ D | C _ D | C _ E7 | Am |
-Q: "Jaleo"
-|| f>f/f/ f/f/f/- | f f/ f/f/f/- | f e/ e/ d | c2 c/ d/ | e/>e/e/ e/ d |
-w: F | F | F E D | C |C _ _D
- c e/ e/ d | c c/ c/ B | A2 c/ d/ | e/>e/e/ e/ d | c e/ e/ d | c c/ c/ B | A2 z |]
-w: C _ D |C _ E7 |Am | C _ D | C _ D | C _ E7 |Am |
+| z z d/d/ |f3/2 z/ d/c/ | A3/2 z/ A/A/A/A/ | c/>c/A/ c/A/F/ | D3/2 z/ d/d/ | f3/2 z/ d/c/ |
+w: |  | Dm | Dm | A7 | Dm | C |
+| A 3/2 z/ f//f//f//g// | a/>a/g/ a/g/f/ | d3/2 z/ ^c/c/ | d3/2 z/ ^c/c/ | d3/2 z/ f/d/ |
+w: | F | A7 | Dm __ A7 | Dm __ A7 | Dm |
+Q:"Primera"
+|| f3/2 z/ d/c/ | A3/2 z/ f/d/ | f/>f/d/ f/ g | a3/2 z/ a/a/ | c' z/ a/g/ | f3/2 z/ a/g/ |
+w: | Dm | Dm | C | F | C | F |
+| f/>d/f/ g f/ | d3/2 z/ a/a/ | c' z/ a/g/ | f3/2 z/ a/g/ | f/>d/f/ g f/ | d3/2 z/ f/d/ | 
+w: | A7 | Dm | C | F | A7 | Dm |
+Q:"Vuelta"
+|| f3/2 z/ d/c/ | A3/2 z/ f/d/ | f/>f/d/ f/ g | a3/2 z/ a/a/ | c' z/ a/g/ | f3/2 z/ a/g/ |
+w: | Dm | Dm | C | F | C | F |
+| f/>d/f/ g f/ | d3/2 z/ a/a/ | c' z/ a/g/ | f3/2 z/ a/g/ | f/>d/f/ g f/ | d3/2 z3/2| 
+w: | A7 | Dm | C | F | A7 | Dm |
+Q:"Quimba"
+|| d/f/d/ f d/ | A3/2 z/ f/d/ | f/>f/d/ f/ g | a3/2 z/ a/a/ | c' z/ a/g/ | f3/2 z/ a/g/ |
+w: | Dm | Dm | C | F | C | F |
+| f/>d/f/ g f/ | d3/2 z/ a/a/ | c' z/ a/g/ | f3/2 z/ a/g/ | f/>d/f/ g f/ | d3/2 z/ f/d/ | 
+w: | A7 | Dm | C | F | A7 | Dm |
+Q:"Jaleo"
+|| f3/2 z/ d/c/ | A3/2 z/ f/d/ | f/>f/d/ f/ g | a3/2 z/ a/a/ | c' z/ a/g/ | f3/2 z/ a/g/ |
+w: | Dm | Dm | C | F | C | F |
+| f/>d/f/ g f/ | d3/2 z/ a/a/ | c' z/ a/g/ | f3/2 z/ a/g/ | f/>d/f/ g f/ | d3/2 z3/2 |]
+w: | A7 | Dm | C | F | A7 | Dm |
 `,
-    'A': `
+    'D': `
 X:1
 T:
 C: Revisión y Transcripción
 C: Douglas Suarez Zubieta
 M:6/8
 L:1/4
-K:A
+K:F
 V:1
-Q: "Intro"
-[Bge]/ z/[Bge]/ [Bge]3/2 | [cea]/ z/ [cea]/ [cea]3/2 | [ceg]/ z/ [ceg]/ [ceg]3/2 | [cfa]/ z/ [cfa]/ [cfa]3/2 | [Bge]/ z/ [Bge]/ [Bge]3/2 | [cea]/ z/ [cea]/ [cea]3/2 |
-w: E | A | C#7 | F#m | E | A
-[ceg]/ z/ [ceg]/ [ceg]3/2 | [cfa]/ z/ [cfa]/ [cfa]/f/g/ |: a/>a/a/ a/b/b/ |  a/>a/a/ a/b/b/ | a/>a/a/ g/f/e/ |
-w: C#7 | F#m | A _ _ B | A _ _ B | A _ _ C#
-|1 f> z/ f/g/ :|2 f> z/ ^e || f3/2 z/ ^e | f3/2 z |
-w: F#m | F#m  C#7| F#m C7 | F#m
-Q: "Primera"
-|| d/>d/d/ d/d/d/- | d d/ d/d/d/- | d c/ c/ B | A2 A/ B/ | c/>c/c/ c/ B |
-w: D | D | D C# B | A |A _ _ B
- A c/ c/ B | A A/ A/ G | F2 A/ B/ | c/>c/c/ c/ B | A c/ c/ B | A A/ A/ G | F2 z ||
-w: A _ B |A _ C#7 |F#m | A _ B | A _ B | A _ C#7 |F#m
-Q: "Vuelta"
-|| d/>d/d/ d/d/d/- | d d/ d/d/d/- | d c/ c/ B | A2 A/ B/ | c/>c/c/ c/ B |
-w: D | D | D C# B | A |A _ _ B
- A c/ c/ B | A A/ A/ G | F2 A/ B/ | c/>c/c/ c/ B | A c/ c/ B | A A/ A/ G | F2 z ||
-w: A _ B |A _ C#7 |F#m | A _ B | A _ B | A _ C#7 |F#m
-Q: "Quimba"
-|| d/>d/d/ d/d/d/- | d d/ d/d/d/- | d c/ c/ B | A2 A/ B/ | c/>c/c/ c/ B |
-w: D | D | D C# B | A |A _ _ B
- A c/ c/ B | A A/ A/ G | F2 A/ B/ | c/>c/c/ c/ B | A c/ c/ B | A A/ A/ G | F2 z ||
-w: A _ B |A _ C#7 |F#m | A _ B | A _ B | A _ C#7 |F#m
-Q: "Jaleo"
-|| d/>d/d/ d/d/d/- | d d/ d/d/d/- | d c/ c/ B | A2 A/ B/ | c/>c/c/ c/ B |
-w: D | D | D C# B | A |A _ _ B
- A c/ c/ B | A A/ A/ G | F2 A/ B/ | c/>c/c/ c/ B | A c/ c/ B | A A/ A/ G | F2 z |]
-w: A _ B |A _ C#7 |F#m | A _ B | A _ B | A _ C#7 |F#m
+
 `,
 };
 
 const Letras = {
     'L': `
+<b>(Primera-Vuelta)</b>
+     Dm            Dm
+Dime pues hay por qué
+         C               F
+hay por qué con tanto rencor
+          C           F
+//si es delito el querer
+       A7           Dm
+y entregarte mi corazón//
+
 <b>(Quimba)</b>
-F           
-Anarrancherita
-         F   E     D   C
-no me mires con desprecio
-   C         D        C
-//yo no voy por tu plata
-    D        C    E7    Am
-es por tus ojos paloma mia//
+  Dm        Dm
+Chapaquita mía
+        C                 F
+por la fuerza y por la razón
+        C         F
+//será eterno el amor
+       A7                Dm
+que nació en nuestro corazón//
 `
 };
 
