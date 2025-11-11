@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>MusBol</title>
+    <link rel="stylesheet" href="1stylesPartituras.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/abcjs@6.2.3/dist/abcjs-basic-min.js" defer></script>
+    <meta name="google" content="notranslate">
+</head>
+
+<body>
+    <header>
+        <h1 class="encabezado">MÚSICAS Y PARTITURAS BOLIVIANAS</h1>
+    </header>
+
+    <nav class="nav">
+        <ul> 
+            <li><a href="../index.html" class="botonI">
+                <i class="fa-notdog fa-solid fa-house"></i>
+            </a></li>
+            <li><a href="../Cueca.html">Cuecas</a></li>
+            <li>
+                <a href="#">Géneros</a>
+                <ul>
+                    <li><a href="../Cueca.html">Cuecas</a></li>
+                    <li><a href="../Huayños.html">Huayños</a></li>
+                    <li><a href="../Morenadas.html">Morenadas</a></li>
+                    <li><a href="../Chacareras.html">Chacareras</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="titulo">
+        <div> 
+            <h2>Chola bandida (Am)</h2>
+        </div>
+    </section>
+
+    <div class="tonalidad-botones">
+        <button onclick="cambiarTonalidad('L')">(Letra y Acordes)</button>
+        <button onclick="cambiarTonalidad('C')">C / Am (Quena)</button>
+        <button onclick="cambiarTonalidad('A')">A / F#m (Saxo)</button>
+    </div>
+
+    <div class="content-container">
+        <div id="partitura-container"></div>
+        <div id="letra-container" style="display:none;"></div>
+    </div>
+
+<footer>Todos los derechos reservados. Douglas Suarez Zubieta</footer>
+
+<script>
+/* ////// Datos de Partituras y Letras ////// */
+const partituras = {
+    'C': `
+X:1
+C: Revisión y Transcripción
+C: Douglas Suarez Zubieta
+M:6/8
+L:1/4
+K:C
+V:1
+Q:"Intro"
+   | z2 A/^G/ | G/>B/d/  f/e/d/  | c/>e/a/- a z/ | e/^g/b/- b z/  | e/a/c'/- c'/A/^G | G/>B/d/ f/e/d/ |
+w: |  | G  | C  | E7 | Am | G |
+   | c/e/a/- a/ z/ |  e ^d =d | c z ^B | c z ^B | c2 z |
+w: | C  | E7 | Am E7 | Am E7 | Am |
+Q: "Primera"
+ | E/>A/^G/  A/ B | c/>c/B/ c/ d | e/>e/d/ e d/ | e2 z | d/>d/d/ d/d/d/ | d/>c/B/ c/ d |
+w: Am | F | G | C | G | C
+ | e/>e/d/ e c/ | A2 z  | d/>d/d/ d/d/d/ | d/>c/B/ c/ d  | e/>e/d/ e c/ | A2 z  |
+w: E7 | Am | G | C | E7 | Am
+Q: "Vuelta"
+ | E/>A/^G/  A/ B | c/>c/B/ c/ d | e/>e/d/ e d/ | e2 z | d/>d/d/ d/d/d/ | d/>c/B/ c/ d |
+w: Am | F | G | C | G | C
+ | e/>e/d/ e c/ | A2 z  | d/>d/d/ d/d/d/ | d/>c/B/ c/ d  | e/>e/d/ e c/ | A2 z  |
+w: E7 | Am | G | C | E7 | Am
+Q: "Quimba"
+ | c/ c c A | c2 z | e/ g e d/ | c2 z | e/ g e d/ | c z c d/ |
+w: Am | F | G | C | G | C
+ | e e/ e c/ | A2 z  | e/ g e d/ | c z c d/ | e e/ e c/ | A2 z  |
+w: E7 | Am | G | C | E7 |Am
+Q: "Jaleo"
+ | E/>A/^G/  A/ B | c/>c/B/ c/ d | e/>e/d/ e d/ | e2 z | d/>d/d/ d/d/d/ | d/>c/B/ c/ d |
+w: Am | F | G | C | G | C
+ | e/>e/d/ e c/ | A2 z  | d/>d/d/ d/d/d/ | d/>c/B/ c/ d  | e/>e/d/ e c/ | A2 z  |
+w: E7 | Am | G | C | E7 | Am
+`,
+    'A': `
+X:1
+T:
+C: Revisión y Transcripción
+C: Douglas Suarez Zubieta
+M:6/8
+L:1/4
+K:A
+V:1
+Q:"Intro"
+   | z2 F/^E/ | E/>G/B/  d/c/B/  | A/>c/f/- f z/ | c/^e/g/- g z/  | c/f/a/- a/F/^E | E/>G/B/ d/c/B/ |
+w: |  | E  | A  | C#7 | F#m | E |
+   | A/c/f/- f/ z/ |  c ^B =B | A z ^G | A z ^G | A2 z |
+w: | A  | C#7 | F#m C#7 | F#m C#7 | F#m |
+Q: "Primera"
+ | C/>F/^E/  F/ G | A/>A/G/ A/ B | c/>c/B/ c B/ | c2 z | B/>B/B/ B/B/B/ | B/>A/G/ A/ B |
+w: F#m | D | E | A | E | A
+ | c/>c/B/ c A/ | F2 z  | B/>B/B/ B/B/B/ | B/>A/G/ A/ B  | c/>c/B/ c A/ | F2 z  |
+w: C#7 | F#m | E | A | C#7 | F#m
+Q: "Vuelta"
+ | C/>F/^E/  F/ G | A/>A/G/ A/ B | c/>c/B/ c B/ | c2 z | B/>B/B/ B/B/B/ | B/>A/G/ A/ B |
+w: F#m | D | E | A | E | A
+ | c/>c/B/ c A/ | F2 z  | B/>B/B/ B/B/B/ | B/>A/G/ A/ B  | c/>c/B/ c A/ | F2 z  |
+w: C#7 | F#m | E | A | C#7 | F#m
+Q: "Quimba"
+ | A/ A A F | A2 z | c/ e c B/ | A2 z | c/ e c B/ | A z A B/ |
+w: F#m | D | E | A | E | A
+ | c c/ c A/ | F2 z  | c/ e c B/ | A z A B/ | c c/ c A/ | F2 z  |
+w: C#7 | F#m | E | A | C#7 |F#m
+Q: "Jaleo"
+ | C/>F/^E/  F/ G | A/>A/G/ A/ B | c/>c/B/ c B/ | c2 z | B/>B/B/ B/B/B/ | B/>A/G/ A/ B |
+w: F#m | D | E | A | E | A
+ | c/>c/B/ c A/ | F2 z  | B/>B/B/ B/B/B/ | B/>A/G/ A/ B  | c/>c/B/ c A/ | F2 z  |
+w: C#7 | F#m | E | A | C#7 | F#m
+`,
+};
+
+const Letras = {
+    'L': `
+<b>(Quimba)</b>
+ Am         F
+Chola bandida
+ G            C
+dónde te has ido
+  G                 C
+//con quién te has ido
+       E7              Am
+que llorando estoy por ti//
+`,
+};
+
+/* Función principal para cambiar el contenido */
+function cambiarTonalidad(tono) {
+    const partituraContainer = document.getElementById('partitura-container');
+    const letraContainer = document.getElementById('letra-container');
+    
+    // Verificación básica
+    if (!partituraContainer || !letraContainer) {
+        console.error('Error: Contenedores no encontrados');
+        return;
+    }
+
+    // Lógica para mostrar Letra
+    if (tono === 'L') {
+        partituraContainer.style.display = 'none';
+        letraContainer.style.display = 'block';
+        
+        // El formato <pre> se maneja con el CSS, solo inyectamos el HTML de la letra
+        letraContainer.innerHTML = `<pre>${Letras['L']}</pre>`;
+    } else {
+        // Lógica para mostrar Partitura
+        partituraContainer.style.display = 'block';
+        letraContainer.style.display = 'none';
+        partituraContainer.innerHTML = ''; // Limpiar
+
+        const abc = partituras[tono];
+
+        // Función de renderizado real, envuelta en try/catch
+        const renderizar = () => {
+            if (typeof ABCJS !== 'undefined' && ABCJS.renderAbc) {
+                try {
+                    ABCJS.renderAbc(partituraContainer, abc, {
+                        responsive: 'resize',
+                        paddingbottom: 50,
+                        paddingright: 50,
+                        scale: 1.5,
+                        add_classes: true
+                    });
+                } catch (error) {
+                    console.error('Error al renderizar partitura:', error);
+                    partituraContainer.innerHTML = '<p style="color: red; text-align: center;">Error al mostrar la partitura.</p>';
+                }
+            } else {
+                 partituraContainer.innerHTML = '<p style="color: red; text-align: center;">Librería ABCJS no disponible (problema de red/carga).</p>';
+            }
+        };
+
+        // Si ABCJS ya está disponible, renderiza inmediatamente.
+        if (typeof ABCJS !== 'undefined') {
+            renderizar();
+        } else {
+            // Si no está listo (debido a 'defer'), espera al evento 'load' o al script en sí
+            // Aquí confiamos en el atributo 'defer' y esperamos un poco.
+            setTimeout(renderizar, 100); 
+        }
+    }
+}
+
+/* Inicialización: Usamos DOMContentLoaded para definir la función, y llamamos a cambiarTonalidad
+   después de un pequeño retraso para asegurar que los scripts con 'defer' tengan tiempo de cargar. */
+document.addEventListener('DOMContentLoaded', function() {
+    // Inicializar mostrando la Letra y Acordes
+    cambiarTonalidad('L'); 
+});
+</script>
+
+</body>
+</html>
