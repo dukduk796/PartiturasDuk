@@ -34,14 +34,14 @@
 
     <section class="titulo">
         <div> 
-            <h2>CHapaquita mia (Dm)</h2>
+            <h2>Khomer Moye (Bm)</h2>
         </div>
     </section>
 
     <div class="tonalidad-botones">
         <button onclick="cambiarTonalidad('L')">(Letra y Acordes)</button>
-        <button onclick="cambiarTonalidad('F')">F / Dm (Quena)</button>
-        <button onclick="cambiarTonalidad('D')">D / Bm (Saxo)</button>
+        <button onclick="cambiarTonalidad('D')">D / Bm (Quena)</button>
+        <button onclick="cambiarTonalidad('B')">B / G#m (Saxo)</button>
     </div>
 
     <div class="content-container">
@@ -54,36 +54,6 @@
 <script>
 /* ////// Datos de Partituras y Letras ////// */
 const partituras = {
-    'F': `
-X:1
-T:
-C: Revisión y Transcripción
-C: Douglas Suarez Zubieta
-M:6/8
-L:1/4
-K:F
-V:1
-Q:"Intro"
-| z z d/d/ |f3/2 z/ d/c/ | A3/2 z/ A/A/A/A/ | c/>c/A/ c/A/F/ | D3/2 z/ d/d/ | f3/2 z/ d/c/ |
-w: |  | Dm | Dm | A7 | Dm | C |
-| A 3/2 z/ f//f//f//g// | a/>a/g/ a/g/f/ | d3/2 z/ ^c/c/ | d3/2 z/ ^c/c/ | d3/2 z/ f/d/ |
-w: | F | A7 | Dm __ A7 | Dm __ A7 | Dm |
-Q:"Primera-Vuelta"
-||: f3/2 z/ d/c/ | A3/2 z/ f/d/ | f/>f/d/ f/ g | a3/2 z/ a/a/ | c' z/ a/g/ | f3/2 z/ a/g/ |
-w: | Dm | Dm | C | F | C | F |
-| f/>d/f/ g f/ | d3/2 z/ a/a/ | c' z/ a/g/ | f3/2 z/ a/g/ | f/>d/f/ g f/ ||1 d3/2 z/ f/d/ :||2 d2 z ||
-w: | A7 | Dm | C | F | A7 | Dm |
-Q:"Quimba"
-|| d/f/d/ f d/ | A3/2 z/ f/d/ | f/>f/d/ f/ g | a3/2 z/ a/a/ | c' z/ a/g/ | f3/2 z/ a/g/ |
-w: | Dm | Dm | C | F | C | F |
-| f/>d/f/ g f/ | d3/2 z/ a/a/ | c' z/ a/g/ | f3/2 z/ a/g/ | f/>d/f/ g f/ | d3/2 z/ f/d/ ||
-w: | A7 | Dm | C | F | A7 | Dm |
-Q:"Jaleo"
-|| f3/2 z/ d/c/ | A3/2 z/ f/d/ | f/>f/d/ f/ g | a3/2 z/ a/a/ | c' z/ a/g/ | f3/2 z/ a/g/ |
-w: | Dm | Dm | C | F | C | F |
-| f/>d/f/ g f/ | d3/2 z/ a/a/ | c' z/ a/g/ | f3/2 z/ a/g/ | f/>d/f/ g f/ | d3/2 z3/2 |]
-w: | A7 | Dm | C | F | A7 | Dm |
-`,
     'D': `
 X:1
 T:
@@ -94,41 +64,42 @@ L:1/4
 K:D
 V:1
 Q:"Intro"
-| z z B/B/ |d3/2 z/ B/A/ | F3/2 z/ F/F/F/F/ | A/>A/F/ A/F/D/ | B,3/2 z/ B/B/ | d3/2 z/ B/A/ |
-| F 3/2 z/ d//d//d//e// | f/>f/e/ f/e/d/ | B3/2 z/ ^A/A/ | B3/2 z/ ^A/A/ | B3/2 z/ d/B/ ||
-Q:"Primera-Vuelta"
-||: d3/2 z/ B/A/ | F3/2 z/ d/B/ | d/>d/B/ d/ e | f3/2 z/ f/f/ | a z/ f/e/ | d3/2 z/ f/e/ |
-| d/>B/d/ e d/ | B3/2 z/ f/f/ | a z/ f/e/ | d3/2 z/ f/e/ | d/>B/d/ e d/ ||1 B3/2 z/ d/B/ :||2 B2 z || 
-Q:"Quimba"
-|| B/d/B/ d B/ | F3/2 z/ d/B/ | d/>d/B/ d/ e | f3/2 z/ f/f/ | a z/ f/e/ | d3/2 z/ f/e/ |
-| d/>B/d/ e d/ | B3/2 z/ f/f/ | a z/ f/e/ | d3/2 z/ f/e/ | d/>B/d/ e d/ | B3/2 z/ d/B/ ||
-Q:"Jaleo"
-||: d3/2 z/ B/A/ | F3/2 z/ d/B/ | d/>d/B/ d/ e | f3/2 z/ f/f/ | a z/ f/e/ | d3/2 z/ f/e/ |
-| d/>B/d/ e d/ | B3/2 z/ f/f/ | a z/ f/e/ | d3/2 z/ f/e/ | d/>B/d/ e d/ | 2 B2 z || 
+  | z3/2 z/ d/f/ | a/d/f/ a/b/b/ | a/d/f/ a/b/b/ | a/d/f/ a/f/d/ | B3/2 z/ d/f/ | a/d/f/ a/b/b/ |
+w: | | D __ E | D __ E  | D __ F#7 | Bm | D __ E  |
+  | a/d/f/ a/b/b/ | a/d/f/ a/f/d/ | B3/2 z3/2 | a/>a/a/ z/ b/b/ | a/>a/a/ z/ b/b/ | a/>a/a/ z/ b/b/ |
+w: | D __ E | D __ F#7 | Bm  | D __ E | D __ E | D __ F#7 |
+  | b/d/f/ b/f/d/ | a/>a/a/ z/ b/b/ | a/>a/a/ z/ b/b/ | f/>f/e/ f/^g/^a/ | b3/2 z/ ^a | b3/2 z/ ^a/ | b3/2 z3/2 | 
+w: | Bm | D __ E | D __ E  | D __ F#7 | Bm _ F#7 | Bm _ F#7 | Bm |
+Q: "Primera-Vuelta-Quimba-Jaleo"
+ | F/>^G/A/ A/B/c/ | d/ d z3/2 | d/>e/d/ e/d/B/ | A/A/A/ B/ B | A3/2 z/ F/>G/ | A/A/A/ B/ B |
+w: | Bm | G | G | D _ E | D | D _ E |
+ | A A/ B/ B | A F/ F/E/E/ | D3/2 z/ F/>G/ | A/A/A/ B/ B | A A/ B/ B | A F/ F/E/E/ | D3/2 z3/2 | 
+w: | D _ E | D _ F#7 | Bm | D __ E | D _ E | D _ F#7 | Bm |
+`,
+    'B': `
+X:1
+T:
+C: Revisión y Transcripción
+C: Douglas Suarez Zubieta
+M:6/8
+L:1/4
+K:B
+V:1
+
 `,
 };
 
 const Letras = {
     'L': `
-<b>(Primera-Vuelta)</b>
-     Dm            Dm
-Dime pues hay por qué
-         C               F
-hay por qué con tanto rencor
-          C           F
-//si es delito el querer
-       A7           Dm
-y entregarte mi corazón//
-
 <b>(Quimba)</b>
-  Dm        Dm
-Chapaquita mía
-        C                 F
-por la fuerza y por la razón
-        C         F
-//será eterno el amor
-       A7                Dm
-que nació en nuestro corazón//
+ Bm              G
+Mayu pata khomer molle
+ G               D      E     D
+pitaq maytaq yakusanki palomitay
+        D       E      D
+// waqtayachu naqipaqchu
+ E     D      F#7  Bm
+waqayniwa qarpayqayki// 
 `
 };
 

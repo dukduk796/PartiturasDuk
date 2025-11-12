@@ -34,14 +34,14 @@
 
     <section class="titulo">
         <div> 
-            <h2>CHapaquita mia (Dm)</h2>
+            <h2>Viva mi patria Bolivia (Am)</h2>
         </div>
     </section>
 
     <div class="tonalidad-botones">
         <button onclick="cambiarTonalidad('L')">(Letra y Acordes)</button>
-        <button onclick="cambiarTonalidad('F')">F / Dm (Quena)</button>
-        <button onclick="cambiarTonalidad('D')">D / Bm (Saxo)</button>
+        <button onclick="cambiarTonalidad('C')">C / Am (Quena)</button>
+        <button onclick="cambiarTonalidad('A')">A / F#m (Saxo)</button>
     </div>
 
     <div class="content-container">
@@ -54,82 +54,98 @@
 <script>
 /* ////// Datos de Partituras y Letras ////// */
 const partituras = {
-    'F': `
+    'C': `
 X:1
 T:
 C: Revisión y Transcripción
 C: Douglas Suarez Zubieta
 M:6/8
 L:1/4
-K:F
+K:C
 V:1
 Q:"Intro"
-| z z d/d/ |f3/2 z/ d/c/ | A3/2 z/ A/A/A/A/ | c/>c/A/ c/A/F/ | D3/2 z/ d/d/ | f3/2 z/ d/c/ |
-w: |  | Dm | Dm | A7 | Dm | C |
-| A 3/2 z/ f//f//f//g// | a/>a/g/ a/g/f/ | d3/2 z/ ^c/c/ | d3/2 z/ ^c/c/ | d3/2 z/ f/d/ |
-w: | F | A7 | Dm __ A7 | Dm __ A7 | Dm |
-Q:"Primera-Vuelta"
-||: f3/2 z/ d/c/ | A3/2 z/ f/d/ | f/>f/d/ f/ g | a3/2 z/ a/a/ | c' z/ a/g/ | f3/2 z/ a/g/ |
-w: | Dm | Dm | C | F | C | F |
-| f/>d/f/ g f/ | d3/2 z/ a/a/ | c' z/ a/g/ | f3/2 z/ a/g/ | f/>d/f/ g f/ ||1 d3/2 z/ f/d/ :||2 d2 z ||
-w: | A7 | Dm | C | F | A7 | Dm |
-Q:"Quimba"
-|| d/f/d/ f d/ | A3/2 z/ f/d/ | f/>f/d/ f/ g | a3/2 z/ a/a/ | c' z/ a/g/ | f3/2 z/ a/g/ |
-w: | Dm | Dm | C | F | C | F |
-| f/>d/f/ g f/ | d3/2 z/ a/a/ | c' z/ a/g/ | f3/2 z/ a/g/ | f/>d/f/ g f/ | d3/2 z/ f/d/ ||
-w: | A7 | Dm | C | F | A7 | Dm |
-Q:"Jaleo"
-|| f3/2 z/ d/c/ | A3/2 z/ f/d/ | f/>f/d/ f/ g | a3/2 z/ a/a/ | c' z/ a/g/ | f3/2 z/ a/g/ |
-w: | Dm | Dm | C | F | C | F |
-| f/>d/f/ g f/ | d3/2 z/ a/a/ | c' z/ a/g/ | f3/2 z/ a/g/ | f/>d/f/ g f/ | d3/2 z3/2 |]
-w: | A7 | Dm | C | F | A7 | Dm |
+z3/2 z/ e/^f/ | g/>^f/g/ =f/e/d/ | e3/2 z/ c/d/ |e/>^d/e/ =d/c/B/ | A3/2 e/^f/ | g/>^f/g/ =f/e/d/ |
+w: | G | C | E7 | Am | G | 
+e3/2 z/ c/d/ |e/>^d/e/ =d/c/B/ | A3/2 z/ ^G | A3/2 z ^G | A2 z ||
+w: C | E7 | Am _ E7 | Am _ E7 | Am _ E7 |Am
+Q: "Primera"
+|| e/>e/e/ e/d/^c/ | d/ B2 z | B/>d/c/ e d/ | c2 z | B/>d/^c/ d B/ | g/ e3/2 z|
+w: Am | E7 | E7 | Am | G | C
+e/>e/d/ e d/ | c2 z | B/>d/^c/ d B/ | g/ e3/2 z| e/>e/d/ e d/ | c2 z ||
+w: E7 | Am | G | C | E7 |Am
+Q: "Vuelta"
+|| e/>e/e/ e/d/^c/ | d/ B2 z | B/>d/c/ e d/ | c2 z | B/>d/^c/ d B/ | g/ e3/2 z|
+w: Am | E7 | E7 | Am | G | C
+e/>e/d/ e d/ | c2 z | B/>d/^c/ d B/ | g/ e3/2 z| e/>e/d/ e d/ | c2 z ||
+w: E7 | Am | G | C | E7 |Am
+Q: "Quimba"
+|| e/>e/e/ e/d/c/ | B2 z | d/>d/d/ d/c/B/ | c2 z | B/>d/^c/ d B/ | g/ e3/2 z|
+w: Am | E7 | E7 | Am | G | C
+e/>e/d/ e d/ | c2 z | B/>d/^c/ d B/ | g/ e3/2 z| e/>e/d/ e d/ | c2 z ||
+w: E7 | Am | G | C | E7 |Am
+Q: "Jaleo"
+|| e/>e/e/ e/d/^c/ | d/ B2 z | B/>d/c/ e d/ | c2 z | B/>d/^c/ d B/ | g/ e3/2 z|
+w: Am | E7 | E7 | Am | G | C
+e/>e/d/ e d/ | c2 z | B/>d/^c/ d B/ | g/ e3/2 z| e/>e/d/ e d/ | c2 z |]
+w: E7 | Am | G | C | E7 |Am
 `,
-    'D': `
+    'A': `
 X:1
 T:
 C: Revisión y Transcripción
 C: Douglas Suarez Zubieta
 M:6/8
 L:1/4
-K:D
+K:A
 V:1
 Q:"Intro"
-| z z B/B/ |d3/2 z/ B/A/ | F3/2 z/ F/F/F/F/ | A/>A/F/ A/F/D/ | B,3/2 z/ B/B/ | d3/2 z/ B/A/ |
-| F 3/2 z/ d//d//d//e// | f/>f/e/ f/e/d/ | B3/2 z/ ^A/A/ | B3/2 z/ ^A/A/ | B3/2 z/ d/B/ ||
-Q:"Primera-Vuelta"
-||: d3/2 z/ B/A/ | F3/2 z/ d/B/ | d/>d/B/ d/ e | f3/2 z/ f/f/ | a z/ f/e/ | d3/2 z/ f/e/ |
-| d/>B/d/ e d/ | B3/2 z/ f/f/ | a z/ f/e/ | d3/2 z/ f/e/ | d/>B/d/ e d/ ||1 B3/2 z/ d/B/ :||2 B2 z || 
-Q:"Quimba"
-|| B/d/B/ d B/ | F3/2 z/ d/B/ | d/>d/B/ d/ e | f3/2 z/ f/f/ | a z/ f/e/ | d3/2 z/ f/e/ |
-| d/>B/d/ e d/ | B3/2 z/ f/f/ | a z/ f/e/ | d3/2 z/ f/e/ | d/>B/d/ e d/ | B3/2 z/ d/B/ ||
-Q:"Jaleo"
-||: d3/2 z/ B/A/ | F3/2 z/ d/B/ | d/>d/B/ d/ e | f3/2 z/ f/f/ | a z/ f/e/ | d3/2 z/ f/e/ |
-| d/>B/d/ e d/ | B3/2 z/ f/f/ | a z/ f/e/ | d3/2 z/ f/e/ | d/>B/d/ e d/ | 2 B2 z || 
+z3/2 z/ c/^d/ | e/>^d/e/ =d/c/B/ | c3/2 z/ A/B/ |c/>^B/c/ =B/A/G/ | F3/2 c/^d/ | e/>^d/e/ =d/c/B/ |
+c3/2 z/ A/B/ |c/>^B/c/ =B/A/G/ | F3/2 z/ ^E | F3/2 z E | F2 z ||
+Q: "Primera"
+|| c/>c/c/ c/B/^A/ | B/ G2 z | G/>B/A/ c B/ | A2 z | G/>B/^A/ B G/ | e/ c3/2 z|
+c/>c/B/ c B/ | A2 z | G/>B/^A/ B G/ | e/ c3/2 z| c/>c/B/ c B/ | A2 z ||
+Q: "Vuelta"
+|| c/>c/c/ c/B/^A/ | B/ G2 z | G/>B/A/ c B/ | A2 z | G/>B/^A/ B G/ | e/ c3/2 z|
+c/>c/B/ c B/ | A2 z | G/>B/^A/ B G/ | e/ c3/2 z| c/>c/B/ c B/ | A2 z ||
+Q: "Quimba"
+|| c/>c/c/ c/B/A/ | G2 z | B/>B/B/ B/A/G/ | A2 z | G/>B/^A/ B G/ | e/ c3/2 z|
+c/>c/B/ c B/ | A2 z | G/>B/^A/ B G/ | e/ c3/2 z| c/>c/B/ c B/ | A2 z ||
+Q: "Jaleo"
+|| c/>c/c/ c/B/^A/ | B/ G2 z | G/>B/A/ c B/ | A2 z | G/>B/^A/ B G/ | e/ c3/2 z|
+c/>c/B/ c B/ | A2 z | G/>B/^A/ B G/ | e/ c3/2 z| c/>c/B/ c B/ | A2 z ||
 `,
 };
 
 const Letras = {
     'L': `
-<b>(Primera-Vuelta)</b>
-     Dm            Dm
-Dime pues hay por qué
-         C               F
-hay por qué con tanto rencor
-          C           F
-//si es delito el querer
-       A7           Dm
-y entregarte mi corazón//
+<b>(Primera)</b>
+Am               E7
+Viva mi patria Bolivia
+E7           Am
+una gran nación
+  G               C 
+//por ella doy mi vida
+E7          Am
+también mi corazón//
 
-<b>(Quimba)</b>
-  Dm        Dm
-Chapaquita mía
-        C                 F
-por la fuerza y por la razón
-        C         F
-//será eterno el amor
-       A7                Dm
-que nació en nuestro corazón//
-`
+Am               E7
+Esta canción que yo canto
+E7           Am
+la brindo con amor
+  G               C 
+//a mi patria Bolivia
+E7         Am
+que quiero con pasión//
+
+Am                  E7
+La llevo en mi corazón
+E7                 Am
+y le doy mi inspiración
+  G                    C 
+//quiere a mi patria Bolivia
+E7             Am
+como la quiero yo//
+`,
 };
 
 /* Función principal para cambiar el contenido */
