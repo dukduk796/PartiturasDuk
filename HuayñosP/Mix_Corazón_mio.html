@@ -34,14 +34,14 @@
 
     <section class="titulo">
         <div> 
-            <h2>Lástima (Dm)</h2>
+            <h2>Mix Corazón mio (Am)</h2>
         </div>
     </section>
 
     <div class="tonalidad-botones">
         <button onclick="cambiarTonalidad('L')">(Letra y Acordes)</button>
-        <button onclick="cambiarTonalidad('F')">F / Dm (Quena)</button>
-        <button onclick="cambiarTonalidad('D')">D / Bm (Saxo)</button>
+        <button onclick="cambiarTonalidad('C')">C / Am (Quena)</button>
+        <button onclick="cambiarTonalidad('A')">A / F#m (Saxo)</button>
     </div>
 
     <div class="content-container">
@@ -54,32 +54,39 @@
 <script>
 /* ////// Datos de Partituras y Letras ////// */
 const partituras = {
-    'F': `
+    'C': `
 X:1
 T:
 C: Revisión y Transcripción
 C: Douglas Suarez Zubieta
 M:2/4
-L:1/4 
-K:F
+L:1/4
+K:C
 V:1
-Q:"Intro"
- ||: f/>e/ d/>e/| f/>e/ d- | d d//f//e//d// | g/>e/- e/d/ | A2 :||
-w:| Bb |  |  |  | F |
- ||: A//c/c// c/c//d//- | d//c//=B/ A/>c/ | d/>c/ A/A//A//- | A//G//G/ F- | [M:2/8] F :||
-w:| F ____ G | ___ F | G _ F | _ A _ Dm | Dm |
-Q:"Letra"
- ||: [M:2/4] A//A//A//A// A/>G/- | G//F//G/ F- | F d//d/d// | d/e//f//- f//e//d/ | A2 | d//d/d// d/e//f//- | f//e//d/ A/>c/ |
-w:| F ____ A7 | ___ Dm | _ Bb |  __ C | F | Bb ____ C | ___ F |
- | d/>c/ A/A//A// | A//G//G/ F- | F d//d/d// | d/e//f//- f//e//d/ | A/>c/ d/>c/ | A/A//A//- A//G//G/ | F2 :||
-w:| G _ F | _A7 _ Dm | _ Bb | __ C | F _ G | F ___ A7 | Dm |
-Q:"Coro"
- ||: f/>e/ d/>e/ | f/>e/ d- | d d//d/e// | f/>e/- e//d/A//- | A2 :||
-w:| Bb |  |  |  | F |
- ||: A//c/c// c/c//d//- | d//c//=B/ A/>c/ | d/>c/ A/A//A//- | A//G//G/ F- | [M:2/8] F :||
-w:| F ____ G | ___ F | G _ F | _ A _ Dm | Dm |
+Q: "1. Corazón mio"
+P: Canto
+  ||: d//e/e// e/>c/ | d/e//e// e | d/e/ c/>A/ | c//c/c// A- | [M:2/8] A :||
+w:| C |  |  | E7 __ Am | Am |
+  ||: [M:2/4] e/c/ A/>G/ | c/e//e// e | d/e/ c/>A/ | c//c/c// A- |[M:2/8] A :||
+w:| C |  |  | E7 __Am | Am |
+P: Instr.
+  ||: [M:2/4] d//e/e// e/>c/ | d/e//e// e | g/a/ c/>A/ | c//c/c// A- | [M:2/8] A :||
+w:| C |  |  | E7 __Am | Am |
+  ||: [M:2/4] d//e/e// e/>c/ | d/e//e// e | g/a/ c/>A/ | c//c/c// A- | [M:2/8] A :||
+w:| C |  |  | E7 __ Am | Am |
+Q: "2. Valgo más que tú"
+P: Instr.
+  ||:[M:2/4] A//c/c// A//c/d// | e/d/ c/c/ | c/>A/ c | E//G/G// E//G/A// | c/A/ G/G/ | G/>E/ G | e/d/ c//c/c// | A2 :||
+w:| C |  |  | F | __ C |  | E7 | Am |
+  ||: G/G/ G/>E/ | G e/d/ | c/>A/ c | G/G/ G/>E/ | G e/d/ | c//c/c// A- | [M:2/8] A :||
+w:| G | _ C |  | G | C E7 | ___ Am  | Am |
+P: Canto
+  ||:[M:2/4] A//c/c// A//c/d// | e/d/ c/c/ | c/>A/ c | E//G/G// E//G/A// | c/A/ G/G/ | G/>E/ G | e/d/ c//c/c// | A2 :||
+w:| C |  |  | F | __ C |  | E7 | Am |
+  ||: g/g/ g/>e/ | g e/d/ | c/>A/ c | g/g/ g/>e/ | g e/d/ | c//c/c// A- | [M:2/8] A :||
+w:| G | _ C |  | G | C E7 | ___ Am  | Am |
 `,
-    'D': `
+    'A': `
 X:1
 T:
 C: Revisión y Transcripción
@@ -88,53 +95,49 @@ M:6/8
 L:1/4
 K:D
 V:1
-Q:"Intro"
- ||: d/>c/ B/>c/| d/>c/ B- | B B//d//c//B// | e/>c/- c/B/ | F2 :||
- ||: F//A/A// A/A//B//- | B//A//G/ F/>A/ | B/>A/ F/F//F//- | F//E//E/ D- | [M:2/8] D :||
-Q:"LetrA"
- ||: [M:2/4] F//F//F//F// F/>E/- | E//D//E/ D- | D B//B/B// | B/c//d//- d//c//B/ | F2 | B//B/B// B/c//d//- | d//c//B/ F/>A/ |
- | B/>A/ F/F//F// | F//E//E/ D- | D B//B/B// | B/c//d//- d//c//B/ | F/>A/ B/>A/ | F/F//F//- F//E//E/ | D2 :||
-Q:"Coro"
- ||: d/>c/ B/>c/ | d/>c/ B- | B B//B/c// | d/>c/- c//B/F//- | F2 :||
- ||: F//A/A// A/A//B//- | B//A//G/ F/>A/ | B/>A/ F/F//F//- | F//E//E/ D- | [M:2/8] D :||
 `,
 };
 
 const Letras = {
     'L': `
-           <b>(Lástima)</b>
-  F             A7     Dm 
-Tanto trajinar por la vida
- Bb                C7    F   
-Buscando a quien poder amar
-   Bb              C7        F   
-//Nunca pude encontrar la dicha
- G    F      A7      Dm 
-De tener su dulce cariño//
+           <b>(Corazón mio)</b>
+   C
+//Corazón mio porque lloras
+               E7      Am
+porque tienes que padecer//
+  C
+//Si la suerte nos separá
+                E7        Am
+no hay remedio más que llorar//
 
-Cuando se cruzó por mi camino
-Hay que día tan maravilloso
-//Como una flor tan delicada
-Sentí sus manos de mi amada//
+//Abandonaste mi corazón
+por buscarte otro mejor//
+//Encotrarlo si como no
+igual cariño ya no ya no//
 
-   Bb 
-//Lástima que lástima
-                 F   
-Eres amor prohibido//
-   F           G      F   
-//Como poder ilusionarme
-    G    F       A7      Dm 
-Si tu destino no es con migo//    
+//En el huerto de tu pecho
+el jardinero solo era yo//
+//Ya no riego mi cultivo
+porque ya tiene otro dueño//
+           <b>(Valgo más que tú)</b>
+  C
+//Yo no soy del todo pobre tengo juventud
+ F                   C
+mañana tendré dinero tu amor compraré
+E7            Am
+y te despreciaré//
 
-Compartimos días muy felices
-Me entregaste toda tu alegría
-//Yo te di toda esa locura
-Y esa pasión que en mi escondía//
+   G                C    
+//Valgo más que tú porque se querer
+ G            C      E7          Am
+por mi gran cariño cuantas llorarán//
 
-Mi cuerpo y mi alma quieren verte
-Quiero sentir tu dulce cariño
-//Como voy hacer para olvidarte
-Si te recuerdo noche y día// 
+//Cuando más lejos yo estaba de tu gran amor
+le pagaste con traiciones a mi corazón
+me voy sin temor//
+
+//Valgo más que tú porque se querer
+por mi gran cariño cuantas llorarán//
 `
 };
 

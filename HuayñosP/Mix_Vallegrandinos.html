@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>MusBol</title>
+    <link rel="stylesheet" href="1stylesPartituras.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/abcjs@6.2.3/dist/abcjs-basic-min.js" defer></script>
+    <meta name="google" content="notranslate">
+</head>
+
+<body>
+    <header>
+        <h1 class="encabezado">MÚSICAS Y PARTITURAS BOLIVIANAS</h1>
+    </header>
+
+    <nav class="nav">
+        <ul> 
+            <li><a href="../index.html" class="botonI">
+                <i class="fa-notdog fa-solid fa-house"></i>
+            </a></li>
+            <li><a href="../Huayños.html">Huayños</a></li>
+            <li>
+                <a href="#">Géneros</a>
+                <ul>
+                    <li><a href="../Cueca.html">Cuecas</a></li>
+                    <li><a href="../Huayños.html">Huayños</a></li>
+                    <li><a href="../Morenadas.html">Morenadas</a></li>
+                    <li><a href="../Chacareras.html">Chacareras</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="titulo">
+        <div> 
+            <h2>Mix Vallegrandinos (Dm)</h2>
+        </div>
+    </section>
+
+    <div class="tonalidad-botones">
+        <button onclick="cambiarTonalidad('L')">(Letra y Acordes)</button>
+        <button onclick="cambiarTonalidad('F')">F / Dm (Quena)</button>
+        <button onclick="cambiarTonalidad('D')">D / Bm (Saxo)</button>
+    </div>
+
+    <div class="content-container">
+        <div id="partitura-container"></div>
+        <div id="letra-container" style="display:none;"></div>
+    </div>
+
+<footer>Todos los derechos reservados. Douglas Suarez Zubieta</footer>
+
+<script>
+/* ////// Datos de Partituras y Letras ////// */
+const partituras = {
+    'F': `
+X:1
+C: Revisión y Transcripción
+C: Douglas Suarez Zubieta
+M:2/4
+L:1/4 
+K:F
+V:1
+Q: "1. Lástima"
+P: Intro
+ ||: f/>e/ d/>e/| f/>e/ d- | d d//f//e//d// | g/>e/- e/d/ | A2 :||
+w:| Bb |  |  |  | F |
+||: A//c/c// c/c//d//- | d//c//=B/ A/>c/ | d/>c/ A/A//A//- | A//G//G/ F- | [M:2/8] F :||
+w:| F ____ G | ___ F | G _ F | _ A _ Dm | Dm |
+P: Letra
+ ||: [M:2/4] A//A//A//A// A/>G/- | G//F//G/ F- | F d//d/d// | d/e//f//- f//e//d/ | A2 | d//d/d// d/e//f//- | f//e//d/ A/>c/ |
+w:| F ____ A7 | ___ Dm | _ Bb |  __ C | F | Bb ____ C | ___ F |
+ | d/>c/ A/A//A// | A//G//G/ F- | F d//d/d// | d/e//f//- f//e//d/ | A/>c/ d/>c/ | A/A//A//- A//G//G/ | F2 :||
+w:| G _ F | _A7 _ Dm | _ Bb | __ C | F _ G | F ___ A7 | Dm |
+P: Coro
+ ||: f/>e/ d/>e/ | f/>e/ d- | d d//d/e// | f/>e/- e//d/A//- | A2 :||
+w:| Bb |  |  |  | F |
+ ||: A//c/c// c/c//d//- | d//c//=B/ A/>c/ | d/>c/ A/A//A//- | A//G//G/ F- | [M:2/8] F :|]
+w:| F ____ G | ___ F | G _ F | _ A7 _ Dm | Dm |
+Q: "2. Vallegrandina"
+ ||: [M:2/4] d//c/c//- c//c//d/ | =B//B/c// d | A2 :|| c/d//c// d//c/c//- | c//c//d/ =B//B/B// | =B//B/c// d |
+w: | F | G | F | F | ___ G | 
+ | A A//=B/c// | d/>A/- A//A//G/ | F d//c/=B// | A/>A/ A//A//G/ | F2 |]
+w: | F | _ A7 | Dm F | A7 | Dm |
+Q: "3. Ay amor"
+ ||:[M:2/4] A3/2 G/ | A2 | A//c/c//- c//c/c// | =B/A/ G/>G/- | G//A//G//F// G- | G/>A/ d/d/ | d//d/d// c/=B/ | A/>A/ c/>=B/ |
+w: | F | | | __ C | G ___ C | __ Bb | | F |
+ | A/A//A//- A//G//G/ | F2 :||: d/d//d//- d//d//d/ | c/=B/ A- | A d/d//d//- | d//d//d/ c/=B/ | A/>A/ c/>=B/ | A/A//A//- A//G//G/ | F2 :||
+w: | A7 | Dm | Bb | __ F | _ Bb | | F | A7 | Dm |
+Q: "4. Gato negro"
+ ||: [M:2/4] A//=B/c// d//d/e// | f d- | d f//f/f// | e//e/e// d | A :||
+w:| Dm | Bb |  | F __ G | F |
+ ||: A//c/c// =B//B/c// | d A- | A d//c/=B// | A//A/A// G | F2 :||
+w: | F | G F | _ F | A7 | Dm |
+Q: "5. La flor de la Dalia"
+ ||:[M:2/4] F/G//A//- A//A//d/ | c/>c/ =B/>B/ | A F/G//A//- | A//A//G/ F- | [M:2/8] F :||
+w:| Dm | F _ G | F A7 | ___ Dm | Dm |
+ ||: [M:2/4] d/d//d//- d//c//d/ | c/>c/ =B/>B/ | A F/G//A//- | A//A//G/ F- | [M:2/8] F :||
+w:| Bb | F _ G | F A7 | ___ Dm | Dm |
+ ||: [M:2/4] d/>d/ c | =B/>B/ A | F/G//A//- A//A//G/ | F2 :||
+w:| Bb _ F | G _ F | A7 | Dm |
+`,
+    'D': `
+X:1
+T:
+C: Revisión y Transcripción
+C: Douglas Suarez Zubieta
+M:6/8
+L:1/4
+K:D
+V:1
+Q:"Intro"
+ ||: d/>c/ B/>c/| d/>c/ B- | B B//d//c//B// | e/>c/- c/B/ | F2 :||
+ ||: F//A/A// A/A//B//- | B//A//G/ F/>A/ | B/>A/ F/F//F//- | F//E//E/ D- | [M:2/8] D :||
+Q:"LetrA"
+ ||: [M:2/4] F//F//F//F// F/>E/- | E//D//E/ D- | D B//B/B// | B/c//d//- d//c//B/ | F2 | B//B/B// B/c//d//- | d//c//B/ F/>A/ |
+ | B/>A/ F/F//F// | F//E//E/ D- | D B//B/B// | B/c//d//- d//c//B/ | F/>A/ B/>A/ | F/F//F//- F//E//E/ | D2 :||
+Q:"Coro"
+ ||: d/>c/ B/>c/ | d/>c/ B- | B B//B/c// | d/>c/- c//B/F//- | F2 :||
+ ||: F//A/A// A/A//B//- | B//A//G/ F/>A/ | B/>A/ F/F//F//- | F//E//E/ D- | [M:2/8] D :||
+`,
+};
+
+const Letras = {
+    'L': `
+           <b>(Lástima)</b>
+  F             A7     Dm 
+Tanto trajinar por la vida
+ Bb                C7    F   
+Buscando a quien poder amar
+   Bb              C7        F   
+//Nunca pude encontrar la dicha
+ G    F      A7      Dm 
+De tener su dulce cariño//
+
+Cuando se cruzó por mi camino
+Hay que día tan maravilloso
+//Como una flor tan delicada
+Sentí sus manos de mi amada//
+
+   Bb 
+//Lástima que lástima
+                 F   
+Eres amor prohibido//
+   F           G      F   
+//Como poder ilusionarme
+    G    F       A7      Dm 
+Si tu destino no es con migo//    
+
+Compartimos días muy felices
+Me entregaste toda tu alegría
+//Yo te di toda esa locura
+Y esa pasión que en mi escondía//
+
+Mi cuerpo y mi alma quieren verte
+Quiero sentir tu dulce cariño
+//Como voy hacer para olvidarte
+Si te recuerdo noche y día//
+           <b>(Vallegrandina)</b>
+   F            G             F
+//Vallegrandina a que has venido//
+ F
+rompiendo duras cadenas
+ G                 F
+sabiendo que te querido
+     F           A7           Dm
+//quién quiere amor que se compre//
+
+//Dices que te vas con vos llevame//
+y si no quieres llevarme
+con este puñal matame
+//quién quiere amor que se compre//
+           <b>(Ay amor)</b>
+  F
+//Ay amor
+                  C
+hay amores en la vida
+    G        C
+lo hemos de ver
+ Bb                   F
+que no se pueden olvidar
+         A7               Dm 
+llorando tu te has de quedar//
+
+  Bb                  F
+//El mundo es mi destino
+Bb                  F
+yo nací para quererte
+         A7               Dm
+llorando tu te has de quedar//
+           <b>(Gato negro)</b>
+   Dm                Bb
+//Quisiera ser gato negro
+             F         G F
+para entrar por tu ventana//
+  F                   G  F
+//y darte las buenas noches
+ F     A7          Dm
+acostadita en tu cama//
+
+//Por cierto debes tenerlo
+que mi amor es verdadero//
+//así le doy así llevo
+a ti solita te quiero//
+           <b>(La flor de la Dalia)</b>
+  Dm               F  G     F
+//La flor de la Dalia sambitay
+ A7            Dm
+dos veces florece//
+  Bb              F  G    F
+//Cuando una menece sambitay
+ A7            Dm
+la otra permanece//
+
+//Cuando yo me muera sambitay
+quién será la viuda//
+//La quién me lo llore sambitay
+en mi sepultura//
+
+  Bb    F   G       F
+//Esta más no esta mal
+A7           Dm
+en mi despedida//
+`
+};
+
+/* Función principal para cambiar el contenido */
+function cambiarTonalidad(tono) {
+    const partituraContainer = document.getElementById('partitura-container');
+    const letraContainer = document.getElementById('letra-container');
+    
+    // Verificación básica
+    if (!partituraContainer || !letraContainer) {
+        console.error('Error: Contenedores no encontrados');
+        return;
+    }
+
+    // Lógica para mostrar Letra
+    if (tono === 'L') {
+        partituraContainer.style.display = 'none';
+        letraContainer.style.display = 'block';
+        
+        // El formato <pre> se maneja con el CSS, solo inyectamos el HTML de la letra
+        letraContainer.innerHTML = `<pre>${Letras['L']}</pre>`;
+    } else {
+        // Lógica para mostrar Partitura
+        partituraContainer.style.display = 'block';
+        letraContainer.style.display = 'none';
+        partituraContainer.innerHTML = ''; // Limpiar
+
+        const abc = partituras[tono];
+
+        // Función de renderizado real, envuelta en try/catch
+        const renderizar = () => {
+            if (typeof ABCJS !== 'undefined' && ABCJS.renderAbc) {
+                try {
+                    ABCJS.renderAbc(partituraContainer, abc, {
+                        responsive: 'resize',
+                        paddingbottom: 50,
+                        paddingright: 50,
+                        scale: 1.5,
+                        add_classes: true
+                    });
+                } catch (error) {
+                    console.error('Error al renderizar partitura:', error);
+                    partituraContainer.innerHTML = '<p style="color: red; text-align: center;">Error al mostrar la partitura.</p>';
+                }
+            } else {
+                 partituraContainer.innerHTML = '<p style="color: red; text-align: center;">Librería ABCJS no disponible (problema de red/carga).</p>';
+            }
+        };
+
+        // Si ABCJS ya está disponible, renderiza inmediatamente.
+        if (typeof ABCJS !== 'undefined') {
+            renderizar();
+        } else {
+            // Si no está listo (debido a 'defer'), espera al evento 'load' o al script en sí
+            // Aquí confiamos en el atributo 'defer' y esperamos un poco.
+            setTimeout(renderizar, 100); 
+        }
+    }
+}
+
+/* Inicialización: Usamos DOMContentLoaded para definir la función, y llamamos a cambiarTonalidad
+   después de un pequeño retraso para asegurar que los scripts con 'defer' tengan tiempo de cargar. */
+document.addEventListener('DOMContentLoaded', function() {
+    // Inicializar mostrando la Letra y Acordes
+    cambiarTonalidad('L'); 
+});
+</script>
+
+</body>
+</html>
