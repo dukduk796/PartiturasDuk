@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Añadido para mejor manejo de padding/border */
+}
+
+body {
+    background-color: rgb(168, 157, 98);
+    padding: 20px;
+}
+
+.hojaPartituras{
+    display:flex;
+    flex-direction:column;
+    flex-wrap:nowrap;
+    justify-content:center;
+    align-items:center;
+    align-content:flex-start;
+    background: rgb(23, 24, 19);
+    overflow: hidden;
+}
+
+/* Contenedor principal para la Partitura y Letra */
+.content-container {
+    margin: 50px auto; 
+    max-width: 950px;
+    width: 100%; /* Asegura que ocupe todo el ancho disponible */
+}
+
+/* Formato de título principal de la sección */
+.titulo{
+    background: rgb(102, 102, 184);
+    padding: 0.5px;
+    color: rgb(2, 8, 10);
+    font-family: 'Georgia';
+    text-align: center; 
+    font-size: 120%;
+    margin: 0 0 1% 0;
+    border-radius: 10px;
+}
+@media (min-width: 480px) {
+    .titulo {
+        font-size: 180%;
+    }
+}
+
+/* Estilos para el contenedor de la Partitura */
+#partitura-container {
+    margin-bottom: 50px; 
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px;
+    /* Estilo del contenedor para la partitura */
+    background-color: rgb(205, 205, 203); 
+    border-radius: 60px; 
+}
+
+/* Estilos para el contenedor de la Letra */
+#letra-container {
+    margin: 0 auto;
+    width: 55%; 
+    max-width: 900px;
+    margin-bottom: 30px; 
+    padding: 12px; 
+    border: 3px solid #bbb; 
+    border-radius: 20px;
+    box-sizing: border-box; 
+    overflow: auto;
+    text-align: left;
+    font-size: 160%;
+}
+
+#letra-container pre {
+    font-family: 'Courier New', Courier, monospace; 
+    font-size: 20px; 
+    line-height: 1.5; 
+    margin:0; 
+    tab-size:4; 
+    -moz-tab-size:4; 
+    padding:6px 8px;
+    white-space: pre-wrap;
+}
+
+.nav {
+    background-color: rgb(39, 39, 36);
+    width: 100%;
+    margin: 1% 0% 1% 0%;
+    border-radius: 40px;   
+    align-items: center;
+    background-image: url(../Banner1.jpg);
+}
+@media (min-width: 480px) {
+    .nav {
+        border-radius: 100px;  
+        width: 100%;
+    }
+}
+
+.nav a {
+    background-color: rgb(166, 173, 87);
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight:700;
+    text-align: center;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 3px;
+    font-size: 140%;
+}
+@media (min-width: 480px) {
+    .nav a {
+        font-size: 300%;
+        border-radius: 20px;
+    }
+}
+
+.nav a:hover {
+    background-color: rgb(134, 134, 230);
+    color: black;
+}
+
+.nav ul {
+    list-style-type: none; 
+    padding: 5px;
+    margin: 5px;
+    display: flex; 
+    justify-content: space-evenly;
+    flex-direction: row;
+    text-align: center;
+}
+@media (max-width: 320px) {
+    .nav ul {
+        flex-direction: column;
+    }
+}
+
+/* Subtítulos (ocultar) */
+.nav ul ul {
+    display: none;
+}
+
+/* Subtítulos (mostrar al hacer hover) */
+.nav ul li:hover > ul {
+    background-color: rgb(57, 57, 53); 
+    display: flex;
+    flex-direction: column; 
+    position: absolute; 
+    margin-top: 1px; 
+    border-radius: 30px;
+    padding: 10px;
+    align-items:normal;
+    transform: translate(30px);
+}
+@media (min-width: 480px) {
+    .nav ul li:hover > ul {
+        transform: translate(-40px);
+        margin-top: 5px;
+    }
+}
+
+/* Espaciado de elementos de lista */
+.nav ul li {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+/* Contenedor de botones de tonalidad */
+.tonalidad-botones {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    margin: 20px 0; 
+    gap: 15px; 
+}
+
+/* Estilos de los botones */
+.tonalidad-botones button {
+    background-color: #4CAF50; 
+    color: white; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 16px; 
+    transition: background-color 0.3s ease; 
+}
+
+/* Efecto hover en botones */
+.tonalidad-botones button:hover {
+    background-color: #45a049; 
+}
+
+footer {
+    font-size: 150%;
+    margin-top: 30px; /* Ajustado para un mejor espaciado */
+    text-align: center;
+    width: 100%;
+}
+@media (max-width: 480px) {
+    footer {
+        margin-top: 80px;
+        font-size: 70%;
+    }
+}

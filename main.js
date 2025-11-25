@@ -5,7 +5,9 @@ const icon = searchContent.querySelector(".icon");
 
 // Usamos un array de objetos
 const suggestions = [
+  { title: "A mi valle Bermejo", url: "CuecasP/A_mi_valle_Bermejo.html" },
   { title: "Anarrancherita", url: "CuecasP/Anarrancherita.html" },
+  { title: "Arbolito de miniatura", url: "CuecasP/Arbolito_miniatura.html" },
   { title: "Atrapadorita", url: "CuecasP/Atrapadorita.html" },
   { title: "Calzon de seda", url: "CuecasP/Calzon_de_seda.html" },
   { title: "Chola bandida", url: "CuecasP/Chola_bandida.html" },

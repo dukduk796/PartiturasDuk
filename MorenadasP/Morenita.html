@@ -19,7 +19,7 @@
             <li><a href="../index.html" class="botonI">
                 <i class="fa-notdog fa-solid fa-house"></i>
             </a></li>
-            <li><a href="../Cueca.html">Cuecas</a></li>
+            <li><a href="../Morenadas.html">Morenadas</a></li>
             <li>
                 <a href="#">Géneros</a>
                 <ul>
@@ -34,14 +34,14 @@
 
     <section class="titulo">
         <div> 
-            <h2>Chapaquita mia (Dm)</h2>
-        </div> 
+            <h2>Morenita (Bm)</h2>
+        </div>
     </section>
 
     <div class="tonalidad-botones">
         <button onclick="cambiarTonalidad('L')">(Letra y Acordes)</button>
-        <button onclick="cambiarTonalidad('F')">F / Dm (Quena)</button>
-        <button onclick="cambiarTonalidad('D')">D / Bm (Saxo)</button>
+        <button onclick="cambiarTonalidad('D')">D / Bm (Quena)</button>
+        <button onclick="cambiarTonalidad('B')">B / G#m (Saxo)</button>
     </div>
 
     <div class="content-container">
@@ -54,81 +54,62 @@
 <script>
 /* ////// Datos de Partituras y Letras ////// */
 const partituras = {
-    'F': `
-X:1
-T:
-C: Revisión y Transcripción
-C: Douglas Suarez Zubieta
-M:6/8
-L:1/4
-K:F
-V:1
-Q:"Intro"
-| z z d/d/ |f3/2 z/ d/c/ | A3/2 z/ A/A/A/A/ | c/>c/A/ c/A/F/ | D3/2 z/ d/d/ | f3/2 z/ d/c/ |
-w: |  | Dm | Dm | A7 | Dm | C |
-| A 3/2 z/ f//f//f//g// | a/>a/g/ a/g/f/ | d3/2 z/ ^c/c/ | d3/2 z/ ^c/c/ | d3/2 z/ f/d/ |
-w: | F | A7 | Dm __ A7 | Dm __ A7 | Dm |
-Q:"Primera-Vuelta"
-||: f3/2 z/ d/c/ | A3/2 z/ f/d/ | f/>f/d/ f/ g | a3/2 z/ a/a/ | c' z/ a/g/ | f3/2 z/ a/g/ |
-w: | Dm | Dm | C | F | C | F |
-| f/>d/f/ g f/ | d3/2 z/ a/a/ | c' z/ a/g/ | f3/2 z/ a/g/ | f/>d/f/ g f/ ||1 d3/2 z/ f/d/ :||2 d2 z ||
-w: | A7 | Dm | C | F | A7 | Dm |
-Q:"Quimba"
-|| d/f/d/ f d/ | A3/2 z/ f/d/ | f/>f/d/ f/ g | a3/2 z/ a/a/ | c' z/ a/g/ | f3/2 z/ a/g/ |
-w: | Dm | Dm | C | F | C | F |
-| f/>d/f/ g f/ | d3/2 z/ a/a/ | c' z/ a/g/ | f3/2 z/ a/g/ | f/>d/f/ g f/ | d3/2 z/ f/d/ ||
-w: | A7 | Dm | C | F | A7 | Dm |
-Q:"Jaleo"
-|| f3/2 z/ d/c/ | A3/2 z/ f/d/ | f/>f/d/ f/ g | a3/2 z/ a/a/ | c' z/ a/g/ | f3/2 z/ a/g/ |
-w: | Dm | Dm | C | F | C | F |
-| f/>d/f/ g f/ | d3/2 z/ a/a/ | c' z/ a/g/ | f3/2 z/ a/g/ | f/>d/f/ g f/ | d3/2 z3/2 |]
-w: | A7 | Dm | C | F | A7 | Dm |
-`,
     'D': `
 X:1
 T:
 C: Revisión y Transcripción
 C: Douglas Suarez Zubieta
-M:6/8
+M:2/4
 L:1/4
 K:D
 V:1
-Q:"Intro"
-| z z B/B/ |d3/2 z/ B/A/ | F3/2 z/ F/F/F/F/ | A/>A/F/ A/F/D/ | B,3/2 z/ B/B/ | d3/2 z/ B/A/ |
-| F 3/2 z/ d//d//d//e// | f/>f/e/ f/e/d/ | B3/2 z/ ^A/A/ | B3/2 z/ ^A/A/ | B3/2 z/ d/B/ ||
-Q:"Primera-Vuelta"
-||: d3/2 z/ B/A/ | F3/2 z/ d/B/ | d/>d/B/ d/ e | f3/2 z/ f/f/ | a z/ f/e/ | d3/2 z/ f/e/ |
-| d/>B/d/ e d/ | B3/2 z/ f/f/ | a z/ f/e/ | d3/2 z/ f/e/ | d/>B/d/ e d/ ||1 B3/2 z/ d/B/ :||2 B2 z || 
-Q:"Quimba"
-|| B/d/B/ d B/ | F3/2 z/ d/B/ | d/>d/B/ d/ e | f3/2 z/ f/f/ | a z/ f/e/ | d3/2 z/ f/e/ |
-| d/>B/d/ e d/ | B3/2 z/ f/f/ | a z/ f/e/ | d3/2 z/ f/e/ | d/>B/d/ e d/ | B3/2 z/ d/B/ ||
-Q:"Jaleo"
-||: d3/2 z/ B/A/ | F3/2 z/ d/B/ | d/>d/B/ d/ e | f3/2 z/ f/f/ | a z/ f/e/ | d3/2 z/ f/e/ |
-| d/>B/d/ e d/ | B3/2 z/ f/f/ | a z/ f/e/ | d3/2 z/ f/e/ | d/>B/d/ e d/ | 2 B2 z || 
+Q:"Md" 
+ ||: f//e//f//e// f/g/ | e c | A/c/ g//f//e//g// | f2 | d//c//d//c// d/e/ | cA | e/e/ e//d//c//e// | d2 :||
+w: | Bm | A |  | D | D | F# |  | Bm |
+Q:"Bajos"
+ ||: A/A/- A/A/ | A d/e/ | f2 | A/A/- A/A/ | A g/e/ | f2 | A/A/- A/A/ | A d/e/ | f2 | f/f//e// f//e//d//c// | B2 :||
+w: | A |  | D | A |  | D | A |  | D | F# | Bm |
+`,
+    'B': `
+X:1
+T:
+C: Revisión y Transcripción
+C: Douglas Suarez Zubieta
+M:2/4
+L:1/4
+K:B
+V:1
 `,
 };
 
 const Letras = {
     'L': `
-<b>(Primera-Vuelta)</b>
-     Dm            Dm
-Dime pues hay por qué
-         C               F
-hay por qué con tanto rencor
-          C           F
-//si es delito el querer
-       A7           Dm
-y entregarte mi corazón//
+  Bm                  A
+//Dime, dime que me quieres
+                 D
+morenita bella flor
+ D                  F#
+que sin ti se desespera
+               Bm
+este loco corazón//
 
-<b>(Quimba)</b>
-  Dm        Dm
-Chapaquita mía
-        C                 F
-por la fuerza y por la razón
-        C         F
-//será eterno el amor
-       A7                Dm
-que nació en nuestro corazón//
+ A                        D
+me emborracho por tu traición
+A                  D
+loco por tu falso amor
+A                  D
+Te robaste mi corazón
+F#                     Bm
+linda paceñita de mi amor
+
+A                         D
+me emborracho por tu traición
+A                   D
+loco por tu falso amor
+A                  D
+Te robaste mi corazón
+F#                    Bm
+linda paceñita bella flor
 `
 };
 
