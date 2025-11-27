@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>MusBol</title>
+    <link rel="stylesheet" href="1stylesPartituras.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/abcjs@6.2.3/dist/abcjs-basic-min.js" defer></script>
+    <meta name="google" content="notranslate">
+</head>
+
+<body>
+    <header>
+        <h1 class="encabezado">MÚSICAS Y PARTITURAS BOLIVIANAS</h1>
+    </header>
+
+    <nav class="nav">
+        <ul> 
+            <li><a href="../index.html" class="botonI">
+                <i class="fa-notdog fa-solid fa-house"></i>
+            </a></li>
+            <li><a href="../Huayños.html">Huayños</a></li>
+            <li>
+                <a href="#">Géneros</a>
+                <ul>
+                    <li><a href="../Cueca.html">Cuecas</a></li>
+                    <li><a href="../Huayños.html">Huayños</a></li>
+                    <li><a href="../Morenadas.html">Morenadas</a></li>
+                    <li><a href="../Chacareras.html">Chacareras</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="titulo">
+        <div> 
+            <h2>Mix Me he resignado (Em)</h2>
+        </div>
+    </section>
+
+    <div class="tonalidad-botones">
+        <button onclick="cambiarTonalidad('L')">(Letra y Acordes)</button>
+        <button onclick="cambiarTonalidad('G')">G / Em (Quena)</button>
+        <button onclick="cambiarTonalidad('E')">E / C#m (Saxo)</button>
+    </div>
+
+    <div class="content-container">
+        <div id="partitura-container"></div>
+        <div id="letra-container" style="display:none;"></div>
+    </div>
+
+<footer>Todos los derechos reservados. Douglas Suarez Zubieta</footer>
+
+<script>
+/* ////// Datos de Partituras y Letras ////// */
+const partituras = {
+    'G': `
+X:1
+T:
+C: Revisión y Transcripción
+C: Douglas Suarez Zubieta
+M:2/4
+L:1/4
+K:G
+V:1
+Q: "1. Te Deajaré"
+  ||: B//d/d// e | B g//e/e//- | e//e//d/ e//e//e/ | g e | d//e/d// d/B/ |
+w:| G _ C | G _ C |  | G _ C | C _ G |
+  | d//d/d// e | B G//A/G// | G/E/ D//D/D// | G E- | [M:2/8] E :||
+w:|  | C _ G |  | B7 _ Em | Em |
+  ||: [M:2/4] d/e//d//- d//d//B/ | d//d//d/ e | B G//A/G// | G/E/ E//D/D// | G E |
+w:|
+  | d/e//d//- d//d//B/ | d//d//d/ e | B G//A/G// | G/E/ D//D/D// | G E- | [M:2/8] E |]
+w:|
+Q: "2. Me he resignado"
+P: Instr.
+  ||: [M:2/4] g//g/a// b | e'/e'//e'//- e'//d'//e'//d'// | b b//b/a// | b b//a//g//- | g//g//e/ b |
+w:
+  | b//b/a// b | e/e//e//- e//d//e//d// | b b//b/a// | b b/a//g//- | g//g//e/ e- | [M:2/8] e :||
+w:
+P: Canto
+  ||: [M:2/4] G//G/A// B/>B/ | B/A/ B | B//B/d// e/>e/ | e/d/ e | g/g//g//- g//e//e/ |
+w:  
+  | d/d/ d/e/ | B d/d//d//- | d/>B/ B/A/ | G/G/ E- | [M:2/8] E :||
+w:  
+  ||: [M:2/4] e//g/g// e/>e/ | e/d/ d/e/ | B B//d/d// | B/>B/ B/A/ | G/E/ G |
+w:  
+  | e//g/g// e/>e/ | e/d/ d/e/ | B B//d/d// | B/>B/ B/A/ | G/A/ E- | [M:2/8] E :|]
+w:
+`,
+    'E': `
+X:1
+T:
+C: Revisión y Transcripción
+C: Douglas Suarez Zubieta
+M:6/8
+L:1/4
+K:E
+V:1
+`,
+};
+
+const Letras = {
+    'L': `
+           <b>(Te Dejaré)</b>
+ G       C  G  C  
+Quisiera irme lejos muy lejos
+         G C
+ay amor mío
+ C       G              C
+para olvidarme de tu cariño
+ G                        B7 Em
+que ha llevado hacia el fracaso
+
+Quién sabe vagando por el mundo
+encontraría otro cariño
+pero un cariño qie a mi me quiera
+para yo también corresponderle
+
+Por tus traiciones cuánto he llorado
+ay amor mío
+hasta el corazón llevo herido
+de tantas penas y tanto llanto
+
+No quiero desearte maldiciones
+porque Dios tarda pero no olvida
+con la misma moneda se paga
+todo el mal que en este mundo se hace
+
+           <b>(Me he resignado)</b>
+   G                       G
+//Me he resignado a olvidarte
+ C                     C
+me he resinado a perderte
+ C                  D          G
+porque nuestro amor es imposible
+              B7        Em
+es mejor que todo se acabe//
+
+ C       G      C      D G
+De nada vale haberte amado
+                        B7 Em
+si nunca supiste comprenderme
+ C     G     C       D   G
+ahora solo queda un camino
+                      B7     Em
+que los dos quedemos como amigos
+
+Recuerda que yo te quise
+recuerdo que yo te he amado
+pero tu en cambio no comprendiste
+hiciste mi vida imposible
+
+Yo no te culpo ni te maldigo
+de lo contrario que seas feliz
+a Dios le pido tu buena suerte
+ya que conmigo no la tuviste
+
+Sin maldecir ni guardar rencores
+a Dios le pido tu buena suerte
+sigue tu rumbo por donde tu quieras
+entre tu y yo todo a terminado
+
+`
+};
+
+/* Función principal para cambiar el contenido */
+function cambiarTonalidad(tono) {
+    const partituraContainer = document.getElementById('partitura-container');
+    const letraContainer = document.getElementById('letra-container');
+    
+    // Verificación básica
+    if (!partituraContainer || !letraContainer) {
+        console.error('Error: Contenedores no encontrados');
+        return;
+    }
+
+    // Lógica para mostrar Letra
+    if (tono === 'L') {
+        partituraContainer.style.display = 'none';
+        letraContainer.style.display = 'block';
+        
+        // El formato <pre> se maneja con el CSS, solo inyectamos el HTML de la letra
+        letraContainer.innerHTML = `<pre>${Letras['L']}</pre>`;
+    } else {
+        // Lógica para mostrar Partitura
+        partituraContainer.style.display = 'block';
+        letraContainer.style.display = 'none';
+        partituraContainer.innerHTML = ''; // Limpiar
+
+        const abc = partituras[tono];
+
+        // Función de renderizado real, envuelta en try/catch
+        const renderizar = () => {
+            if (typeof ABCJS !== 'undefined' && ABCJS.renderAbc) {
+                try {
+                    ABCJS.renderAbc(partituraContainer, abc, {
+                        responsive: 'resize',
+                        paddingbottom: 50,
+                        paddingright: 50,
+                        scale: 1.5,
+                        add_classes: true
+                    });
+                } catch (error) {
+                    console.error('Error al renderizar partitura:', error);
+                    partituraContainer.innerHTML = '<p style="color: red; text-align: center;">Error al mostrar la partitura.</p>';
+                }
+            } else {
+                 partituraContainer.innerHTML = '<p style="color: red; text-align: center;">Librería ABCJS no disponible (problema de red/carga).</p>';
+            }
+        };
+
+        // Si ABCJS ya está disponible, renderiza inmediatamente.
+        if (typeof ABCJS !== 'undefined') {
+            renderizar();
+        } else {
+            // Si no está listo (debido a 'defer'), espera al evento 'load' o al script en sí
+            // Aquí confiamos en el atributo 'defer' y esperamos un poco.
+            setTimeout(renderizar, 100); 
+        }
+    }
+}
+
+/* Inicialización: Usamos DOMContentLoaded para definir la función, y llamamos a cambiarTonalidad
+   después de un pequeño retraso para asegurar que los scripts con 'defer' tengan tiempo de cargar. */
+document.addEventListener('DOMContentLoaded', function() {
+    // Inicializar mostrando la Letra y Acordes
+    cambiarTonalidad('L'); 
+});
+</script>
+
+</body>
+</html>
